@@ -1,0 +1,144 @@
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+
+  .landing {
+    position: relative;
+
+  }
+
+  .landing .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .landing .data {
+    width: 60%;
+    text-align: left;
+    margin-right: auto;
+  }
+
+  .landing .img,
+  .feature .img {
+    position: absolute;
+    width: 30%;
+  }
+
+  .landing .img {
+    right: 0
+  }
+
+  .feature .img {
+    left: 0;
+  }
+
+  .landing .img img {
+    transform: translate(-35%, -25%) scale(1.1)
+  }
+
+  .landing .container .getStart {
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .landing .container .getStart a {
+    margin-right: 15px;
+  }
+
+  .feature .data,
+  .feature .data,
+  .extension .container .info,
+  .q .container .info {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .feature .tabs {
+    flex-direction: row;
+    margin: auto;
+    width: 75%;
+    margin-top: 40px;
+  }
+
+  .feature .tabs p {
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--gray);
+  }
+
+  .tabContent .data {
+    width: 50%;
+    text-align: left !important;
+    margin-right: 0;
+  }
+
+  .tabContent .data p {
+    padding: 0;
+  }
+
+  .feature .img img {
+    transform: translate(30%, -20%) scale(1.1);
+  }
+
+  .feature .tabContent a {
+    display: block;
+    width: fit-content;
+  }
+
+  .extension .browses {
+    flex-direction: row;
+
+  }
+
+  .extension .browses div {
+    width: calc(93% / 3);
+  }
+
+  .extension .browses div:nth-of-type(2) {
+    margin-top: 100px;
+  }
+
+  .extension .browses div:nth-of-type(3) {
+    margin-top: 200px;
+  }
+
+  footer .container> div form {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .container div form input {
+    padding: 10px !important;
+    margin: 0;
+  }
+
+  footer .container div form input:first-child {
+    width: 80%
+  }
+.error{
+  width:80%
+}
+  footer .container div form input:last-child {
+    width: 30%;
+
+  }
+}

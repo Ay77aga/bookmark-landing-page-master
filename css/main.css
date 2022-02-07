@@ -1,0 +1,391 @@
+:root {
+  --blue: hsl(231, 69%, 60%);
+  --gray: hsl(229, 8%, 60%);
+  --red: hsl(0, 94%, 66%);
+  --darkBlue: hsl(229, 31%, 21%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* border: 1px solid lime; */
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--gray);
+
+}
+
+.container {
+  margin: auto;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+  transition: .5s ease-out;
+  cursor: pointer;
+}
+
+.icon span {
+  height: 4px;
+  width: 100%;
+  background: #000;
+}
+
+.icon.active span {
+  position: absolute;
+}
+
+.icon.active {
+  transform: rotateZ(-180deg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+nav {
+  display: none;
+}
+
+.landing {
+  margin-top: 100px;
+}
+
+.landing .img,
+.feature .img {
+  width: 80%;
+  background: var(--blue);
+  border-bottom-left-radius: 7em;
+}
+
+.landing .img {
+  margin-left: auto;
+}
+
+.landing img {
+  transform: translate(-40px, -40px) scale(1.2);
+}
+
+.landing img,
+.feature img {
+  width: 100%;
+
+}
+
+.landing .data,
+.feature .container .data {
+  text-align: center;
+}
+
+.data h2 {
+  margin: 30px auto;
+}
+
+.data p {
+  padding: 10px 15px;
+  line-height: 1.8;
+}
+
+.landing .getStart {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+.landing .getStart a,
+.feature .tabContent a {
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, .1);
+}
+
+.landing .getStart a:first-child,
+.feature .tabContent a {
+  background: var(--blue);
+  color: #fff;
+}
+
+.landing .getStart a:last-child {
+  background: #DFDFDF;
+  color: #000;
+}
+
+/* End Landing */
+.feature {
+  margin-top: 50px;
+  position: relative;
+}
+
+.feature .tabs {
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.feature .tabs p {
+  width: 80%;
+  margin: auto;
+  color: #000;
+  font-weight: 400;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+  border-top: 1px solid var(--gray);
+  text-align: center;
+}
+
+.feature .tabs p:hover {
+  color: var(--red);
+}
+
+.feature .tabs p.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 55%;
+  background: var(--red)
+}
+
+.feature .img {
+  bottom: 0;
+  border-radius: 0 0 7em 0;
+  transform: translateY(30%);
+}
+
+.feature .img img {
+  width: 95%;
+}
+
+.feature .img img {
+  transform: translate(40px, -40px) scale(1.2);
+}
+
+.tabContent {
+  margin-top: 100px;
+}
+
+.feature .tab {
+  display: none;
+}
+
+.feature .tab.active {
+  display: block
+}
+
+.feature .tabContent a {
+  display: none;
+}
+
+/* End Feature*/
+
+.extension {
+  margin-top: 150px;
+}
+
+.extension .container {
+  text-align: center;
+}
+
+
+.extension .container .info>p {
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.extension .browses {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: x 10px;
+}
+
+.extension .browses div {
+  width: 80%;
+  margin: 40px auto;
+  padding: 15px 0;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.extension .browses div:hover {
+  transform: scale(1.05)
+}
+
+.extension .browses div img {
+  width: 50%;
+}
+
+.extension .browses div h3 {
+  margin: 10px auto;
+}
+
+.extension .browses div [alt=dots] {
+  width: 100%;
+  margin: 25px auto;
+}
+
+.extension .browses div button,
+.q .container a {
+  background: var(--blue);
+  color: #fff;
+  border-radius: 7px;
+  width: 85%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+a,
+.extension .browses div button {
+  transition: .3s;
+
+}
+
+a:hover,
+.extension .browses div button:hover {
+  border: 2px solid var(--blue) !important;
+  background: #fff !important;
+  color: var(--blue) !important;
+}
+
+.q {
+  margin-top: 150px;
+}
+
+.q .info {
+  text-align: center;
+  line-height: 1.8;
+  margin: 15px auto;
+  padding: 15px;
+}
+
+.q_a {
+  width: 80%;
+  margin: auto
+}
+
+.qu {
+  display: flex;
+  border-bottom: 1px solid var(--gray);
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  padding: 10px 0;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.qu,
+.qu i {
+  transition: .3s;
+}
+
+.qu:hover {
+  color: var(--red);
+}
+
+.qu.active i {
+  transform: rotateZ(180deg);
+}
+
+.q .q_a .a {
+  display: none;
+  padding: 5px 15px;
+}
+
+.q .q_a .a.active {
+  display: block;
+}
+
+.q .container a {
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+}
+
+footer {
+  background: var(--blue);
+  padding: 30px 5px;
+}
+
+footer .container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  line-height: 2;
+}
+
+footer .container div p {
+  color: #fff;
+  letter-spacing: 3px;
+}
+
+footer .container div form {
+  width: 100%;
+}
+
+footer .container div form input {
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+footer .container div form input:first-child {
+  background: #fff;
+}
+
+footer .container div form input:first-child:focus {
+  outline: none;
+}
+
+footer .container div form input:last-child {
+  background: var(--red);
+  color: #fff;
+  margin: 20px auto;
+}
+
+footer .container div form input:first-child {
+  border: 3px solid var(--red)
+}
+
+.error {
+  display: none;
+  margin-top: -4px;
+  background: var(--red);
+}
