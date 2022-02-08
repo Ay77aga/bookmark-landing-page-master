@@ -17,6 +17,52 @@
     width: 750px;
   }
 
+  .icon {
+    height: 0;
+    width: 0;
+  }
+
+  nav {
+    display: block;
+  }
+nav svg{
+  display: none;
+}
+  nav div {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    padding: 10px 20px;
+  }
+
+  nav ul li a {
+    color: #000;
+  }
+
+  nav ul li:hover a {
+    color: var(--red);
+    border: none;
+  }
+
+  .login:hover {
+    border: 1px solid var(--red);
+    background: #fff;
+  }
+
+  .login {
+    border-radius: 6px;
+    background: var(--red);
+  }
+.login a{
+      color: #fff;
+
+}
   .landing {
     position: relative;
 

@@ -49,13 +49,27 @@ p {
   background: #000;
 }
 
-.icon.active span {
-  position: absolute;
+
+
+.active span:last-child {
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: .5s;
 }
 
-.icon.active {
-  transform: rotateZ(-180deg);
+nav ul li.active img {
+  transform: rotateZ(180deg)
 }
+
+.active span:first-child {
+  transform: rotateZ(45deg);
+}
+
+.active span:nth-child(2) {
+  transform: rotateZ(-45deg);
+}
+
 
 header {
   display: flex;
@@ -64,8 +78,87 @@ header {
   padding: 30px;
 }
 
-nav {
-  display: none;
+@media (max-width: 767px) {
+  nav {
+    display: none;
+    position: fixed;
+    padding: 40px 14px;
+    top: 0;
+    width: 100%;
+    background: hsla(229, 31%, 21%, 0.9);
+    height: 0;
+    left: 0;
+    z-index: 66;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  nav.active {
+    display: block;
+    animation: oo 2s both ease;
+  }
+
+  @keyframes oo {
+    100% {
+      opacity: 1;
+      height: 100vh;
+    }
+  }
+
+  .icon.active {
+    z-index: 888;
+    top: 40px;
+    right: 50px;
+    transform: rotateZ(-180deg);
+    position: fixed;
+  }
+
+  .icon.active span {
+    position: absolute;
+    background: #fff;
+  }
+
+  nav ul {
+    margin-top: 50px;
+    text-align: center
+  }
+
+  nav ul li {
+    padding: 25px 0;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  nav ul li:not(.login) {
+    border-top: 2px solid var(--gray);
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+
+  nav div {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  nav div i {
+    padding: 15px;
+    color: #fff;
+  }
+
+  .login {
+    border: 3px solid #fff;
+    padding: 10px;
+    border-radius: 7px;
+  }
 }
 
 .landing {
@@ -193,10 +286,17 @@ nav {
 
 .feature .tab {
   display: none;
+  opacity: 0;
 }
 
 .feature .tab.active {
-  display: block
+  display: block;
+  animation: p 1s both;
+}
+@keyframes p{
+  100%{
+    opacity: 1;
+  }
 }
 
 .feature .tabContent a {
@@ -270,7 +370,7 @@ a,
 
 }
 
-a:hover,
+.landing .getStart a:hover .feature .tabContent a:hover,
 .extension .browses div button:hover {
   border: 2px solid var(--blue) !important;
   background: #fff !important;
@@ -312,16 +412,32 @@ a:hover,
 .qu:hover {
   color: var(--red);
 }
-
+.qu.active{
+  border-bottom: 5px solid var(--red);
+  color: var(--red);
+  font-weight: bold;
+}
 .qu.active i {
   transform: rotateZ(180deg);
 }
 
 .q .q_a .a {
   display: none;
-  padding: 5px 15px;
+  padding: 15px 0;
+  color: var(--darkBlue);
+  line-height: 1.5;
+  height: 0;
+  overflow: auto;
+  animation: hh .5s both;
 }
-
+@keyframes hh{
+  50%{
+    height: 100px;
+  }
+  100%{
+    height: fit-content;
+  }
+}
 .q .q_a .a.active {
   display: block;
 }
@@ -334,7 +450,7 @@ a:hover,
 
 footer {
   background: var(--blue);
-  padding: 30px 5px;
+  padding: 30px 0 0;
 }
 
 footer .container div {
@@ -366,6 +482,11 @@ footer .container div form input {
   border: none;
 }
 
+footer .container div form div {
+  margin: auto;
+  width: 100%;
+}
+
 footer .container div form input:first-child {
   background: #fff;
 }
@@ -388,4 +509,35 @@ footer .container div form input:first-child {
   display: none;
   margin-top: -4px;
   background: var(--red);
+}
+.error.active{
+  display: block;
+  width: 100%;
+  
+}
+ul {
+  list-style: none
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--darkBlue);
+  width: 100%;
+  padding: 30px 0;
+}
+
+.menu ul li {
+  padding: 15px;
+  color: #fff;
+  ;
+  text-align: center;
+}
+
+.menu i {
+  font-size: 30px;
+  color: #fff;
+  padding: 15px;
 }
