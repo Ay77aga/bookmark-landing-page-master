@@ -370,7 +370,8 @@ a,
 
 }
 
-.landing .getStart a:hover .feature .tabContent a:hover,
+.landing .getStart a:hover,
+.feature .tabContent a:hover,
 .extension .browses div button:hover {
   border: 2px solid var(--blue) !important;
   background: #fff !important;

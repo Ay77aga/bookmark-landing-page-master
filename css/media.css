@@ -63,6 +63,13 @@ nav svg{
       color: #fff;
 
 }
+.menu ,
+.menu ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
   .landing {
     position: relative;
 
